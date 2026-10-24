@@ -1,0 +1,31 @@
+﻿<Page x:Class="WpfApp1.Pages.ChangePassPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Смена пароля">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Width="320" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10">
+            <Grid>
+                <TextBox x:Name="TextBoxLogin" MaxLength="30" ToolTip="Введите логин"
+                         Tag="{Binding ElementName=HintLogin}" TextChanged="Field_Changed"/>
+                <TextBlock x:Name="HintLogin" Text="Логин" Style="{DynamicResource Hint}"/>
+            </Grid>
+            <Grid>
+                <PasswordBox x:Name="PasswordBoxOld" ToolTip="Введите текущий пароль"
+                             Tag="{Binding ElementName=HintOld}" PasswordChanged="Field_Changed"/>
+                <TextBlock x:Name="HintOld" Text="Текущий пароль" Style="{DynamicResource Hint}"/>
+            </Grid>
+            <Grid>
+                <PasswordBox x:Name="PasswordBoxNew"
+                             ToolTip="Новый пароль: от 6 символов, английская раскладка, минимум одна цифра"
+                             Tag="{Binding ElementName=HintNew}" PasswordChanged="Field_Changed"/>
+                <TextBlock x:Name="HintNew" Text="Новый пароль" Style="{DynamicResource Hint}"/>
+            </Grid>
+            <Grid>
+                <PasswordBox x:Name="PasswordBoxConfirm" ToolTip="Повторите новый пароль"
+                             Tag="{Binding ElementName=HintConfirm}" PasswordChanged="Field_Changed"/>
+                <TextBlock x:Name="HintConfirm" Text="Повторите новый пароль" Style="{DynamicResource Hint}"/>
+            </Grid>
+            <Button Content="Сохранить" ToolTip="Сохранить новый пароль" Margin="5,15,5,5" Click="ButtonSave_Click"/>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

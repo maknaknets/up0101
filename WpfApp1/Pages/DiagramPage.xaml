@@ -1,0 +1,22 @@
+﻿<Page x:Class="WpfApp1.Pages.DiagramPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Диаграммы и отчёты">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <WrapPanel Grid.Row="0" HorizontalAlignment="Center" Margin="5">
+            <ComboBox x:Name="ComboBoxUser" Width="260" DisplayMemberPath="FIO"
+                      ToolTip="Выберите клиента для диаграммы" SelectionChanged="UpdateChart"/>
+            <ComboBox x:Name="ComboBoxChart" Width="160"
+                      ToolTip="Выберите тип диаграммы" SelectionChanged="UpdateChart"/>
+            <Button Content="Экспорт в Excel" ToolTip="Выгрузить перевозки в файл .xlsx" Click="ButtonExcel_Click"/>
+            <Button Content="Экспорт в Word и PDF" ToolTip="Выгрузить отчёт в файлы .docx и .pdf" Click="ButtonWord_Click"/>
+        </WrapPanel>
+
+        <Grid x:Name="ChartGrid" Grid.Row="1" Margin="5"/>
+    </Grid>
+</Page>

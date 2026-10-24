@@ -1,0 +1,12 @@
+﻿<Page x:Class="WpfApp1.Pages.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Панель администратора">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock x:Name="TextBlockWelcome" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+        <Button Content="Таблица пользователей" ToolTip="Просмотр и редактирование пользователей" Click="ButtonUsers_Click"/>
+        <Button Content="Таблица типов грузов" ToolTip="Просмотр и редактирование типов грузов" Click="ButtonTypes_Click"/>
+        <Button Content="Таблица перевозок" ToolTip="Просмотр, поиск и редактирование перевозок" Click="ButtonShipments_Click"/>
+        <Button Content="Диаграммы и отчёты" ToolTip="Диаграмма расходов и экспорт отчётов" Click="ButtonDiagram_Click"/>
+    </StackPanel>
+</Page>
